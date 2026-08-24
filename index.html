@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>행사 안내 디스플레이</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #000; /* 배경색 설정 */
+      overflow: hidden; /* 스크롤바 숨김 */
+    }
+    .container {
+      display: flex;
+      flex-direction: row; /* 세로배치를 원하시면 column 로 변경 */
+      align-items: flex-start;
+    }
+    .board-area {
+      width: 2048px;
+      height: 576px;
+    }
+    .guide-area {
+      width: 1024px;
+      height: 576px;
+      background-color: #000000; /* 안내 영역 배경 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 행사게시판 iframe -->
+    <iframe 
+      class="board-area" 
+      src="https://mannaevent.com/trans/did.php?board=2" 
+      style="border:none;" 
+      allowfullscreen>
+    </iframe>
+
+    <!-- 1024x768 행사참여 안내 영역 (이미지 또는 콘텐츠) -->
+    <div class="guide-area">
+      <!-- 이미지 삽입 시: <img src="안내이미지주소.jpg" width="1024" height="768" alt="행사 안내"> -->
+      <!-- 또 다른 iframe 또는 HTML 내용 작성 -->
+       <img src="./26_2_BHSEV.jpg" alt="행사안내">
+    </div>
+  </div>
+</body>
+</html>
